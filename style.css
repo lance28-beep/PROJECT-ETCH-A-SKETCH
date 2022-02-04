@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+:root {
+  --primary: #f5f5c6;
+  --secondary: #7da87b;
+  --tertiary: #326765;
+  --quaternary: #27253d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+p,
+button {
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+}
+
+button:hover,
+i:hover {
+  cursor: pointer;
+  background-color: var(--primary);
+  color: var(--quaternary);
+}
+
+h1 {
+  margin-top: 18px;
+  font-size: 2.5rem;
+  color: var(--primary);
+}
+
+.numOfGrid {
+  margin-top: 9px;
+  font-size: 2rem;
+  color: var(--primary);
+}
+/* 
+///slider design */
+.slider-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#sizeSlider {
+  width: 90vw;
+  max-width: 960px;
+}
+
+#numOfGrid{
+  align-items: center;
+}
+/* ///End slider design */
+.container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--secondary);
+}
+
+.sketch {
+  margin: 0 auto;
+  width:98vw;
+  max-width: 960px;
+  border: 1px solid var(--quaternary);
+  height: 60vh;
+  background: var(--primary);
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 17px;
+}
+
+.controls {
+  margin-top: 9px;
+  display: grid;
+  width: 80%;
+  max-width: 970px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-auto-rows: 50px;
+  column-gap: 21px;
+  row-gap: 16px;
+  margin-bottom: 40px;
+}
+
+button {
+  border-radius: 24px;
+  border: 1px solid var(--primary);
+  background-color: var(--tertiary);
+  color: var(--primary);
+  font-size: 1.2rem;
+}
+
+/* Media query */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 730px) {
+
+  .controls button:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 730px) {
+  .controls {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .controls button:nth-child(1) {
+    grid-column: 1 / 3;
+  }
+  .controls button:nth-child(2) {
+    grid-column: 3 / -1;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {
+
+} */
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 960px) {
+  .container {
+    display: grid;
+  }
+
+  h1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .controls {
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    width: 100%;
+    max-width: 960px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  button {
+    width: 190px;
+    height: 57px;
+    font-size: 16px;
+  }
+
+}
