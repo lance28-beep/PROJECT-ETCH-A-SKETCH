@@ -7,12 +7,23 @@
   --quaternary: #27253d;
 }
 
+.grid-item:hover {
+  background: var(--quaternary);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+#grid {
+  display: grid;
+}
+
+#grid-item {
+  background-color: red;
+}
 h1,
 p,
 button {
@@ -53,7 +64,7 @@ h1 {
   max-width: 960px;
 }
 
-#numOfGrid{
+#numOfGrid {
   align-items: center;
 }
 /* ///End slider design */
@@ -69,7 +80,7 @@ h1 {
 
 .sketch {
   margin: 0 auto;
-  width:98vw;
+  width: 98vw;
   max-width: 960px;
   border: 1px solid var(--quaternary);
   height: 60vh;
@@ -104,7 +115,6 @@ button {
 /* Media query */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 730px) {
-
   .controls button:last-child {
     grid-column: 1 / -1;
   }
@@ -153,5 +163,4 @@ button {
     height: 57px;
     font-size: 16px;
   }
-
 }
