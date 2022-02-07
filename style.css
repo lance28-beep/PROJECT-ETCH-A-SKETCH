@@ -143,6 +143,15 @@ button {
   font-size: 1.2rem;
 }
 
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
 /* Media query */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 730px) {
