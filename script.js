@@ -1,3 +1,9 @@
+////unfinish project.
+/*
+unable to draw line or change background of the sketch child 
+each time i mouseDown and mouseover the grid.
+*/
+
 //set up defaut color, backgroundColor and size of the sketch
 const defaultColor = '#326765'
 const defaultBackgroundColor = '#F5F5C6'
