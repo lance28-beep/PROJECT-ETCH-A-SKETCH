@@ -16,6 +16,8 @@ let [updateColor, updateBackgroundColor, updateSize] = [
   defaultSize,
 ]
 
+///get element
+
 // mouse up and mouse down event
 let [mouseDown, mouseOver] = [false, false]
 let [color, random, eraser] = [true, false, false]
@@ -95,6 +97,11 @@ const createGrid = (size) => {
   }
   //create div
   for (let i = 0; i < size * size; i++) {
+    const span = document.querySelectorAll('.numOfGrid span')
+    // span.textContent = 'hello'
+    span.forEach((item) => {
+      item.textContent = `${updateSize}`
+    })
     const div = document.createElement('div')
 
     div.classList.add('grid-item')
