@@ -38,6 +38,37 @@ i:hover {
   color: var(--quaternary);
 }
 
+#primary_color {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+/* ///color picker */
+#color,
+#backGround {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: inherit;
+}
+
+#color span,
+#backGround span {
+  margin-left: 10px;
+}
+
+#primary_color::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+#primary_color::-webkit-color-swatch {
+  border: 1px solid #f5f5c6;
+  border-radius: 50%;
+}
+
 h1 {
   margin-top: 18px;
   font-size: 2.5rem;
@@ -115,6 +146,13 @@ button {
 /* Media query */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 730px) {
+  #color,
+  #backGround {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
   .controls button:last-child {
     grid-column: 1 / -1;
   }
@@ -122,6 +160,13 @@ button {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 730px) {
+  #color,
+  #backGround {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
   .controls {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -141,6 +186,14 @@ button {
 @media only screen and (min-width: 960px) {
   .container {
     display: grid;
+  }
+  #color,
+  #backGround {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: inherit;
   }
 
   h1 {
